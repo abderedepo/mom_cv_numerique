@@ -1,0 +1,138 @@
+/* ✅ Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Police globale */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+  color: #212529;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Conteneur */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ✅ Navbar */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #0d6efd !important;
+}
+
+.nav-link {
+  color: #495057 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* ✅ Titre section */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+/* ✅ Boutons */
+.btn-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.btn-outline-dark {
+  border-color: #343a40;
+  color: #343a40;
+}
+.btn-outline-dark:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+/* ✅ Footer */
+footer {
+  background-color: #f1f3f5;
+  color: #6c757d;
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* ✅ Mode sombre */
+body.dark-mode {
+  background-color: #121212;
+  color: #e4e6eb;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .nav-link {
+  color: #e4e6eb !important;
+}
+
+body.dark-mode footer {
+  background-color: #1b1b1b;
+  color: #aaa;
+}
+
+/* ✅ Image profil */
+.img-fluid {
+  max-width: 200px;
+  height: auto;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Animation fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emoji {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}

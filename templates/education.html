@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Certifications - Portfolio{% endblock %}
+
+{% block content %}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<div class="container py-5">
+    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">📜 Certifications</h2>
+
+    <div class="row g-4">
+        {% set suppress_indices = [8] %}
+        {% set total = 10 %}
+        {% set delay_base = 50 %}
+        {% set count = 0 %}
+
+        {# Ordre d'affichage avec échange entre 2 et 9 #}
+        {% set display_order = [3, 4, 5, 6, 7, 9, 10, 1, 2] %}
+        {# Après échange, remplacer 9 par 2, et 2 par 9 #}
+        {% set display_order = [3, 4, 5, 6, 7, 2, 10, 1, 9] %}
+
+        {% for i in display_order %}
+            {% if i not in suppress_indices %}
+                {% set count = count + 1 %}
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ delay_base * count }}">
+                    <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                        <div class="card-body d-flex flex-column align-items-center">
+
+                            {% if i == 2 %}
+                                {% set ext = 'png' %}
+                                <img src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
+                                     alt="Certificat {{ i }}"
+                                     class="img-fluid border rounded shadow-sm"
+                                     style="max-width: 500px; height: 320px; object-fit: contain;" />
+                            {% elif i == 6 %}
+                                {% set ext = 'jpg' %}
+                                <img src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
+                                     alt="Certificat {{ i }}"
+                                     class="img-fluid border rounded shadow-sm"
+                                     style="max-width: 500px; height: 320px; object-fit: contain;" />
+                            {% else %}
+                                {% set ext = 'pdf' %}
+                                <iframe src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
+                                        width="100%" height="320px"
+                                        class="border rounded shadow-sm"
+                                        style="max-width: 500px;"></iframe>
+                            {% endif %}
+
+                            <h5 class="card-title text-success mt-3">Certificat {{ i }}</h5>
+                            <a href="{{ url_for('static', filename= i ~ '.' ~ ext) }}" target="_blank"
+                               class="btn btn-outline-primary mt-2">Voir le certificat</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Témoignages -->
+    <hr class="my-5" data-aos="fade-in" data-aos-duration="800">
+    <div data-aos="fade-up" data-aos-duration="800">
+        <h2 class="mb-4 text-primary">💬 Témoignages</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow rounded-4 dark-mode-block">
+                    <div class="card-body">
+                        <p class="card-text dark-mode-text-light">
+                            "Abderemane est un professionnel rigoureux et passionné. Son expertise technique a grandement contribué au succès de notre projet."
+                        </p>
+                        <h6 class="text-success mb-0">Aminata Diop</h6>
+                        <small class="text-muted">Chef de projet chez Camusat Sénégal</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow rounded-4 dark-mode-block">
+                    <div class="card-body">
+                        <p class="card-text dark-mode-text-light">
+                            "Toujours disponible et compétent, Said a su s’adapter rapidement aux défis techniques avec une grande efficacité."
+                        </p>
+                        <h6 class="text-success mb-0">Mamadou Ba</h6>
+                        <small class="text-muted">Responsable IT</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

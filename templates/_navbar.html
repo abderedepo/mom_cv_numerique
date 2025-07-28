@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="{{ url_for('home') }}">
+      Abderemane Said Chioni
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-end">
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'about' %}active{% endif %}" href="{{ url_for('about') }}">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'skills' %}active{% endif %}" href="{{ url_for('skills') }}">Compétences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'experience' %}active{% endif %}" href="{{ url_for('experience') }}">Expérience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'education' %}active{% endif %}" href="{{ url_for('education') }}">Formation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'blog' %}active{% endif %}" href="{{ url_for('blog') }}">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'testimonials' %}active{% endif %}" href="{{ url_for('testimonials') }}">Témoignages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

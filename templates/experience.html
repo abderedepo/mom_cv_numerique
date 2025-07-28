@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Expériences - Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- AOS animation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<div class="container py-5">
+    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">💼 Expériences Professionnelles</h2>
+
+    <div class="row g-4">
+
+        <!-- Expérience 1 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Technicien Réseaux – <strong>Camusat Sénégal</strong></h5>
+                    <h6 class="card-subtitle mb-3 text-muted">Octobre – Décembre 2023</h6>
+                    <ul class="dark-mode-text-light">
+                        <li>Configuration des modems (IP, DNS, APN…)</li>
+                        <li>Suivi des tickets via EFMS (boîtiers IoT)</li>
+                        <li>Support technique pour les équipes terrain</li>
+                        <li>Mise à jour de fichiers de suivi</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="badge bg-info text-dark me-1">Support IT</span>
+                        <span class="badge bg-secondary me-1">Réseaux</span>
+                        <span class="badge bg-warning text-dark">IoT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expérience 2 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Assistant Projet EFMS – <strong>Camusat Sénégal</strong></h5>
+                    <h6 class="card-subtitle mb-3 text-muted">Février – Avril 2023</h6>
+                    <ul class="dark-mode-text-light">
+                        <li>Collecte de données sur sites énergétiques</li>
+                        <li>Analyse IP, géolocalisation, APN</li>
+                        <li>Reporting & comptes rendus Excel</li>
+                        <li>Participation à l'inventaire et au support EFMS</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <span class="badge bg-info text-dark me-1">Analyse</span>
+                        <span class="badge bg-secondary me-1">Reporting</span>
+                        <span class="badge bg-warning text-dark">Gestion de projet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Section Centres d’intérêt -->
+    <hr class="my-5" data-aos="fade-in" data-aos-duration="800">
+
+    <div data-aos="fade-up" data-aos-duration="800">
+        <h3 class="mb-4 text-primary">🎯 Centres d’intérêt</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Lecture</li>
+            <li class="list-group-item">Voyages</li>
+            <li class="list-group-item">Technologies et innovation</li>
+            <li class="list-group-item">Sports (football, course à pied)</li>
+        </ul>
+    </div>
+
+</div>
+
+{% endblock %}

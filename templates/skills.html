@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% block title %}Compétences - Portfolio{% endblock %}
+
+{% block content %}
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
+
+<style>
+    .skills-container {
+        max-width: 1080px;
+        margin: 3rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .skill-card {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        padding: 2rem;
+        width: 100%;
+        max-width: 460px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+    .skill-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .skill-icon {
+        font-size: 2.6rem;
+        color: #007acc;
+    }
+    .skill-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #003d80;
+    }
+    ul.skill-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul.skill-list li {
+        margin-bottom: 0.6rem;
+        font-size: 1.05rem;
+        color: #444;
+        position: relative;
+        padding-left: 1.3rem;
+    }
+    ul.skill-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #007acc;
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 1;
+    }
+    .skill-bar {
+        margin-top: 0.8rem;
+        height: 8px;
+        border-radius: 10px;
+        background-color: #e0e0e0;
+        overflow: hidden;
+    }
+    .skill-bar-fill {
+        height: 100%;
+        border-radius: 10px;
+        background-color: #007acc;
+        transition: width 1.2s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+        .skills-container {
+            flex-direction: column;
+        }
+        .skill-card {
+            max-width: 100%;
+        }
+    }
+
+    /* 🌙 Dark Mode Support */
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .skill-card {
+            background-color: #1e1e1e;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+        }
+        .skill-title {
+            color: #66ccff;
+        }
+        .skill-icon {
+            color: #66ccff;
+        }
+        ul.skill-list li {
+            color: #ddd;
+        }
+        ul.skill-list li::before {
+            color: #66ccff;
+        }
+        .skill-bar {
+            background-color: #333;
+        }
+        .skill-bar-fill {
+            background-color: #66ccff;
+        }
+    }
+</style>
+
+<div class="skills-container">
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-header">
+            <div class="skill-icon">🌐</div>
+            <h3 class="skill-title">Administration Réseaux</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Routage : OSPF, BGP, EIGRP</li>
+            <li>Switching : VLAN, STP, EtherChannel</li>
+            <li>VPN : IPSec, L2TP, SSL, GRE</li>
+            <li>Wireshark, Cisco Packet Tracer</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-header">
+            <div class="skill-icon">🖥️</div>
+            <h3 class="skill-title">Systèmes Linux & Windows</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Administration Debian, RedHat, Ubuntu</li>
+            <li>Active Directory, GPO, RDP</li>
+            <li>Services : DNS, DHCP, FTP, Apache</li>
+            <li>Scripting Bash / PowerShell</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-header">
+            <div class="skill-icon">🔐</div>
+            <h3 class="skill-title">Cybersécurité</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Firewall Cisco ASA, Fortinet, iptables</li>
+            <li>IDS/IPS : Snort, Wazuh, Suricata</li>
+            <li>Analyse de logs, durcissement</li>
+            <li>Gestion des vulnérabilités (OpenVAS, Nessus)</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="skill-header">
+            <div class="skill-icon">☁️</div>
+            <h3 class="skill-title">Cloud & Virtualisation</h3>
+        </div>
+        <ul class="skill-list">
+            <li>VMware ESXi, Proxmox, Hyper-V</li>
+            <li>AWS (EC2, VPC, S3), Azure (VM, VNets)</li>
+            <li>Docker, notions Kubernetes</li>
+            <li>Terraform (initiation)</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="skill-header">
+            <div class="skill-icon">📊</div>
+            <h3 class="skill-title">Supervision & Monitoring</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Zabbix, PRTG, Nagios, Wazuh</li>
+            <li>Analyse de performances & alertes</li>
+            <li>Tableaux de bord : Grafana</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="skill-header">
+            <div class="skill-icon">👨‍💻</div>
+            <h3 class="skill-title">Scripting & DevOps</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Python (automatisation, Netmiko, SDN)</li>
+            <li>Bash, PowerShell</li>
+            <li>CI/CD (notions GitLab CI)</li>
+            <li>HTML / CSS / Flask (bases)</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+    </div>
+
+</div>
+{% endblock %}

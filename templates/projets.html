@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Projets - Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- AOS animation -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<div class="container py-5">
+    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">🧪 Projets Réalisés</h2>
+
+    <div class="row g-4">
+
+        <!-- Projet SDN -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Infrastructure SDN dans un LAN</h5>
+                    <p class="card-text dark-mode-text-light">
+                        Projet de fin d’études à l’ISI : Conception et déploiement d’un réseau SDN (Software Defined Networking)
+                        avec Floodlight et Mininet.<br>
+                        Segmentation via VXLAN, gestion des flux avec OpenFlow, supervision centralisée et topologie virtualisée.
+                    </p>
+                    <div class="mt-auto">
+                        <span class="badge bg-dark me-1">Python</span>
+                        <span class="badge bg-secondary me-1">OpenFlow</span>
+                        <span class="badge bg-primary me-1">SDN</span>
+                        <span class="badge bg-info text-dark">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet Supervision Réseau (modifié) -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Mise en place de systèmes de supervision</h5>
+                    <p class="card-text dark-mode-text-light">
+                        <br>
+                        Projet Licence  à l’ISI– Implémentation d’un système de surveillance des périphériques et des services.
+                    </p>
+                    <div class="mt-auto">
+                        <span class="badge bg-primary me-1 text-dark">Nagios</span>
+                        <span class="badge bg-info me-1 text-dark">Eyes of Network</span>
+                        <span class="badge bg-secondary me-1 text-dark">SNMP</span>
+                        <span class="badge bg-dark text-light">Cisco</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet Azure VM -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Déploiement Serveur Web sur Azure</h5>
+                    <p class="card-text dark-mode-text-light">
+                        Création d’une machine virtuelle sur Azure, installation d’un serveur web (Apache/NGINX),
+                        configuration de la sécurité réseau et test de la mise en ligne. <br>
+                        Certifié le 8 mai 2025.
+                    </p>
+                    <div class="mt-auto">
+                        <span class="badge bg-primary me-1">Azure</span>
+                        <span class="badge bg-info text-dark me-1">VM</span>
+                        <span class="badge bg-success me-1">Linux</span>
+                        <span class="badge bg-dark">Apache</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet Azure Data Factory -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Flux de Données dans Azure Data Factory</h5>
+                    <p class="card-text dark-mode-text-light">
+                        Création et configuration de flux de données mappés dans Azure Data Factory pour l’automatisation de la collecte
+                        et transformation de données dans le cloud.
+                    </p>
+                    <div class="mt-auto">
+                        <span class="badge bg-primary me-1">Azure</span>
+                        <span class="badge bg-secondary me-1">Data Factory</span>
+                        <span class="badge bg-warning text-dark">ETL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet Site Web Flask -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">Site Web Dynamique avec Flask</h5>
+                    <p class="card-text dark-mode-text-light">
+                        Développement d’un site web avec Python/Flask : gestion des utilisateurs, formulaire, vues dynamiques avec Jinja2,
+                        interface responsive HTML5/CSS3, et base de données connectée.
+                    </p>
+                    <div class="mt-auto">
+                        <span class="badge bg-dark me-1">Python</span>
+                        <span class="badge bg-danger me-1">Flask</span>
+                        <span class="badge bg-success me-1">HTML/CSS</span>
+                        <span class="badge bg-warning text-dark">SQLite/MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
