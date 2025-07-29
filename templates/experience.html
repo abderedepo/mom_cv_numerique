@@ -4,14 +4,14 @@
 {% block content %}
 
 <!-- AOS animation -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init({ duration: 800, once: true });
 </script>
 
 <div class="container py-5">
-    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">💼 Expériences Professionnelles</h2>
+    <h2 class="mb-5 text-primary" data-aos="fade-right">💼 Expériences Professionnelles</h2>
 
     <div class="row g-4">
 
@@ -21,7 +21,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-success">Technicien Réseaux – <strong>Camusat Sénégal</strong></h5>
                     <h6 class="card-subtitle mb-3 text-muted">Octobre – Décembre 2023</h6>
-                    <ul class="dark-mode-text-light">
+                    <ul class="dark-mode-text-light ps-3">
                         <li>Configuration des modems (IP, DNS, APN…)</li>
                         <li>Suivi des tickets via EFMS (boîtiers IoT)</li>
                         <li>Support technique pour les équipes terrain</li>
@@ -42,7 +42,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-success">Assistant Projet EFMS – <strong>Camusat Sénégal</strong></h5>
                     <h6 class="card-subtitle mb-3 text-muted">Février – Avril 2023</h6>
-                    <ul class="dark-mode-text-light">
+                    <ul class="dark-mode-text-light ps-3">
                         <li>Collecte de données sur sites énergétiques</li>
                         <li>Analyse IP, géolocalisation, APN</li>
                         <li>Reporting & comptes rendus Excel</li>
@@ -60,9 +60,9 @@
     </div>
 
     <!-- Section Centres d’intérêt -->
-    <hr class="my-5" data-aos="fade-in" data-aos-duration="800">
+    <hr class="my-5" data-aos="fade-in" />
 
-    <div data-aos="fade-up" data-aos-duration="800">
+    <div data-aos="fade-up">
         <h3 class="mb-4 text-primary">🎯 Centres d’intérêt</h3>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Lecture</li>
@@ -71,7 +71,6 @@
             <li class="list-group-item">Sports (football, course à pied)</li>
         </ul>
     </div>
-
 </div>
 
 {% endblock %}

@@ -2,10 +2,6 @@
 {% block title %}Compétences - Portfolio{% endblock %}
 
 {% block content %}
-<!-- AOS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>AOS.init();</script>
 
 <style>
     .skills-container {
@@ -85,6 +81,7 @@
     @media (max-width: 640px) {
         .skills-container {
             flex-direction: column;
+            margin: 2rem 1rem; /* un peu de marge latérale sur mobile */
         }
         .skill-card {
             max-width: 100%;
@@ -122,8 +119,8 @@
     }
 </style>
 
-<div class="skills-container">
-
+<div class="container">
+  <div class="skills-container">
     <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
         <div class="skill-header">
             <div class="skill-icon">🌐</div>
@@ -206,6 +203,7 @@
         </ul>
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
     </div>
-
+  </div>
 </div>
+
 {% endblock %}
