@@ -186,6 +186,73 @@
       });
     });
   </script>
+  <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #1d1f2f, #3e3d5a);
+  color: white;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #00aaff;
+}
+
+.nav-link {
+  color: #e0e0e0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00aaff;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  left: 20%;
+  bottom: -6px;
+  background-color: #00aaff;
+  border-radius: 2px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.custom-toggler {
+  background-image: url("data:image/svg+xml,%3Csvg ... %3C/svg%3E"); /* facultatif, icône personnalisée */
+}
+
+.logo-asc {
+  width: 40px;
+  height: 40px;
+  background-color: #00aaff;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+</style>
+
 
   {% block scripts %}{% endblock %}
 </body>

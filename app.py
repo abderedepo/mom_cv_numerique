@@ -1,6 +1,5 @@
 from flask import Flask
 from routes import init_routes
-2
 app = Flask(__name__)
 init_routes(app)
 

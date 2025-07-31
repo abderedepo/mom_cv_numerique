@@ -81,7 +81,7 @@
     @media (max-width: 640px) {
         .skills-container {
             flex-direction: column;
-            margin: 2rem 1rem; /* un peu de marge latérale sur mobile */
+            margin: 2rem 1rem;
         }
         .skill-card {
             max-width: 100%;
@@ -121,6 +121,8 @@
 
 <div class="container">
   <div class="skills-container">
+
+    <!-- 1. Réseaux -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
         <div class="skill-header">
             <div class="skill-icon">🌐</div>
@@ -135,6 +137,7 @@
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
     </div>
 
+    <!-- 2. Systèmes -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
         <div class="skill-header">
             <div class="skill-icon">🖥️</div>
@@ -149,6 +152,7 @@
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%;"></div></div>
     </div>
 
+    <!-- 3. Cybersécurité -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
         <div class="skill-header">
             <div class="skill-icon">🔐</div>
@@ -163,6 +167,7 @@
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
     </div>
 
+    <!-- 4. Cloud -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
         <div class="skill-header">
             <div class="skill-icon">☁️</div>
@@ -177,6 +182,7 @@
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%;"></div></div>
     </div>
 
+    <!-- 5. Supervision -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
         <div class="skill-header">
             <div class="skill-icon">📊</div>
@@ -190,7 +196,24 @@
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 70%;"></div></div>
     </div>
 
+    <!-- 6. Réseaux SDN -->
     <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="skill-header">
+            <div class="skill-icon">🧠</div>
+            <h3 class="skill-title">Réseaux SDN</h3>
+        </div>
+        <ul class="skill-list">
+            <li>Conception d’architectures SDN</li>
+            <li>Émulation de réseaux avec Mininet</li>
+            <li>Protocole OpenFlow</li>
+            <li>Contrôleurs : OpenDaylight, ONOS, Floodlight</li>
+            <li>Utilisation d’API REST pour l’automatisation</li>
+        </ul>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+    </div>
+
+    <!-- 7. DevOps -->
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
         <div class="skill-header">
             <div class="skill-icon">👨‍💻</div>
             <h3 class="skill-title">Scripting & DevOps</h3>
@@ -203,6 +226,7 @@
         </ul>
         <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
     </div>
+
   </div>
 </div>
 

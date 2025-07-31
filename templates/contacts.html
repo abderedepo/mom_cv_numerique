@@ -10,59 +10,63 @@
 </script>
 
 <div class="container py-5">
-    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">📜 Certifications</h2>
+    <h2 class="mb-5 text-primary" data-aos="fade-right" data-aos-duration="800">📜 Certifications et Badges</h2>
 
     <div class="row g-4">
-        {% set suppress_indices = [8] %}
-        {% set display_order = [3, 4, 1, 2, 5, 6, 7, 9, 10] %}
         {% set delay_base = 50 %}
         {% set count = 0 %}
 
-        {% for i in display_order %}
-            {% if i not in suppress_indices %}
-                {% set count = count + 1 %}
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ delay_base * count }}">
-                    <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
-                        <div class="card-body d-flex flex-column align-items-center">
-                            {% if i == 2 %}
-                                {% set ext = 'png' %}
-                                <div class="border rounded shadow-sm"
-                                     style="width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
-                                    <img src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
-                                         alt="Certificat {{ i }}"
-                                         style="max-height: 100%; max-width: 100%; object-fit: contain;" />
-                                </div>
-                                <a href="{{ url_for('static', filename= i ~ '.' ~ ext) }}" download
-                                   class="btn btn-outline-primary mt-3">
-                                   Télécharger
-                                </a>
-                            {% elif i == 6 %}
-                                {% set ext = 'jpg' %}
-                                <img src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
-                                     alt="Certificat {{ i }}"
-                                     class="img-fluid border rounded shadow-sm"
-                                     style="max-width: 100%; height: 250px; object-fit: contain;" />
-                                <a href="{{ url_for('static', filename= i ~ '.' ~ ext) }}" download
-                                   class="btn btn-outline-primary mt-3">
-                                   Télécharger
-                                </a>
-                            {% else %}
-                                {% set ext = 'pdf' %}
-                                <iframe src="{{ url_for('static', filename= i ~ '.' ~ ext) }}"
-                                        width="100%" height="250px"
-                                        class="border rounded shadow-sm"
-                                        style="max-width: 100%;"></iframe>
-                                <a href="{{ url_for('static', filename= i ~ '.' ~ ext) }}" target="_blank"
-                                   class="btn btn-outline-primary mt-3">
-                                    Voir en plein écran
-                                </a>
-                            {% endif %}
-
-                            <h5 class="card-title text-success mt-3">Certificat {{ i }}</h5>
-                        </div>
+        {# Paires Certificat + Badge #}
+        {% for i in range(1, 6) %}
+            {% set count = count + 1 %}
+            <!-- Certificat -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ delay_base * count }}">
+                <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <img src="{{ url_for('static', filename= i ~ '.jpg') }}"
+                             alt="Certificat {{ i }}"
+                             class="img-fluid border rounded shadow-sm"
+                             style="max-width: 100%; height: 250px; object-fit: contain;" />
+                        <p class="mt-2 fw-bold">Certificat {{ i }}</p>
+                        <a href="{{ url_for('static', filename= i ~ '.jpg') }}" target="_blank"
+                           class="btn btn-outline-primary mt-2">Voir le certificat</a>
                     </div>
                 </div>
-            {% endif %}
+            </div>
+
+            {% set count = count + 1 %}
+            <!-- Badge -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ delay_base * count }}">
+                <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <img src="{{ url_for('static', filename= 'ba' ~ i ~ '.jpg') }}"
+                             alt="Badge {{ i }}"
+                             class="img-fluid border rounded shadow-sm"
+                             style="max-width: 100%; height: 250px; object-fit: contain;" />
+                        <p class="mt-2 fw-bold">Badge {{ i }}</p>
+                        <a href="{{ url_for('static', filename= 'ba' ~ i ~ '.jpg') }}" target="_blank"
+                           class="btn btn-outline-primary mt-2">Voir le badge</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {# Certificats restants : 6, 7 #}
+        {% for i in [6, 7] %}
+            {% set count = count + 1 %}
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ delay_base * count }}">
+                <div class="card h-100 border-0 shadow rounded-4 dark-mode-block">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <img src="{{ url_for('static', filename= i ~ '.jpg') }}"
+                             alt="Certificat {{ i }}"
+                             class="img-fluid border rounded shadow-sm"
+                             style="max-width: 100%; height: 250px; object-fit: contain;" />
+                        <p class="mt-2 fw-bold">Certificat {{ i }}</p>
+                        <a href="{{ url_for('static', filename= i ~ '.jpg') }}" target="_blank"
+                           class="btn btn-outline-primary mt-2">Voir le certificat</a>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </div>
 

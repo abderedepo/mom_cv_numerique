@@ -1,151 +1,104 @@
-/* ✅ Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ✅ Police globale */
-body {
+/* Police Poppins */
+nav.navbar {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8fafc;
-  color: #212529;
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #1f2937; /* Bleu-gris foncé élégant */
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* ✅ Conteneur */
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+/* Logo ASC avec accent or doux */
+.logo-asc {
+  width: 44px;
+  height: 44px;
+  background: #fbbf24; /* Couleur or / jaune doux */
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(251, 191, 36, 0.4);
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+.logo-asc:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(251, 191, 36, 0.6);
 }
 
-/* ✅ Navbar */
-.navbar {
-  background-color: #ffffff !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid #dee2e6;
-}
-
+/* Nom complet */
 .navbar-brand {
-  font-weight: 600;
-  color: #0d6efd !important;
+  color: #f9fafb;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  user-select: none;
 }
 
+/* Liens nav */
 .nav-link {
-  color: #495057 !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #cbd5e1; /* gris clair */
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Icônes un peu plus petites */
+.nav-link i {
+  font-size: 0.9rem;
+}
+
+/* Soulignement animé or doux */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: #fbbf24;
+  box-shadow: 0 0 8px #fbbf24;
+  transition: width 0.35s ease;
+  border-radius: 3px;
+}
+
+/* Hover et actif */
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-link:hover {
-  color: #0d6efd !important;
+  color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 0 6px #fbbf24aa;
 }
 
-/* ✅ Titre section */
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #0d6efd;
-  margin-bottom: 1rem;
+.nav-link.active {
+  color: #fbbf24 !important;
+  font-weight: 700;
+  text-shadow: 0 0 6px #fbbf24;
 }
 
-/* ✅ Boutons */
-.btn-outline-primary {
-  border-color: #0d6efd;
-  color: #0d6efd;
-}
-.btn-outline-primary:hover {
-  background-color: #0d6efd;
-  color: #fff;
+/* Burger menu personnalisé */
+.navbar-toggler-icon.custom-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fbbf24' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  transition: background-color 0.3s ease;
 }
 
-.btn-outline-dark {
-  border-color: #343a40;
-  color: #343a40;
-}
-.btn-outline-dark:hover {
-  background-color: #343a40;
-  color: #fff;
+.navbar-toggler:hover .navbar-toggler-icon.custom-toggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23f59e0b' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* ✅ Footer */
-footer {
-  background-color: #f1f3f5;
-  color: #6c757d;
-  padding: 1.2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-/* ✅ Mode sombre */
-body.dark-mode {
-  background-color: #121212;
-  color: #e4e6eb;
-}
-
-body.dark-mode .container {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode .navbar {
-  background-color: #1a1a1a !important;
-}
-
-body.dark-mode .nav-link {
-  color: #e4e6eb !important;
-}
-
-body.dark-mode footer {
-  background-color: #1b1b1b;
-  color: #aaa;
-}
-
-/* ✅ Image profil */
-.img-fluid {
-  max-width: 200px;
-  height: auto;
-}
-
-.rounded-circle {
-  border-radius: 50%;
-}
-
-.shadow {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* ✅ Animation fadeInUp */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.emoji {
-  font-size: 1.3rem;
-  vertical-align: middle;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem !important;
-    border-radius: 10px !important;
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
-
-  /* Si tu as des images */
-  img {
-    max-width: 100%;
-    height: auto;
+  .logo-asc {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }
